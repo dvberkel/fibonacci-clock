@@ -35,4 +35,4 @@
         this.hour = date.getHours() % 24;
         this.minutes = Math.floor(date.getMinutes() / 10);
     }
-})(window.fibonacci = window.fionacci || {});
+})(window.fibonacci = window.fibonacci || {});
