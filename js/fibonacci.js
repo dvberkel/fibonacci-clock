@@ -26,4 +26,13 @@
             return frequencies;
         }, {});
     }
+
+    var Clock = $.Clock = function(){
+        this.update();
+    };
+    Clock.prototype.update = function(){
+        var date = new Date();
+        this.hour = date.getHours() % 24;
+        this.minutes = Math.floor(date.getMinutes() / 10);
+    }
 })(window.fibonacci = window.fionacci || {});
