@@ -14,4 +14,16 @@
             rest: n
         }
     }
+
+    $.frequency = function(){
+        return Array.prototype.slice.call(arguments).reduce(function(frequencies, elements){
+            elements.forEach(function(element){
+                if (!frequencies[element]) {
+                    frequencies[element] = 0;
+                }
+                frequencies[element] += 1;
+            });
+            return frequencies;
+        }, {});
+    }
 })(window.fibonacci = window.fionacci || {});
